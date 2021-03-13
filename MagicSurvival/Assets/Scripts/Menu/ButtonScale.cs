@@ -4,15 +4,17 @@ using UnityEngine.EventSystems;
 public class ButtonScale : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField]
-    float min_scale = 1f;
+    public float min_scale = 1f;
     [SerializeField]
-    float max_scale = 1.2f;
+    public float max_scale = 1.2f;
     [SerializeField]
     float time = 1f;
     [SerializeField]
-    RectTransform text;
+    RectTransform rect;
     [SerializeField]
     bool over = false;
+    [SerializeField]
+    public bool active = true;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -26,12 +28,15 @@ public class ButtonScale : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void Start()
     {
-        text = this.GetComponent<RectTransform>();
+        rect = this.GetComponent<RectTransform>();
     }
     void Update()
     {
-        if (over) text.localScale = Vector3.Lerp(new Vector3(min_scale, min_scale,1), new Vector3(max_scale, max_scale, 1), time);
-        else text.localScale = Vector3.Lerp(new Vector3(max_scale, max_scale, 1), new Vector3(min_scale, min_scale, 1), time);
+        if (active)
+        {
+            if (over) rect.localScale = Vector3.Lerp(new Vector3(min_scale, min_scale, 1), new Vector3(max_scale, max_scale, 1), time);
+            else rect.localScale = Vector3.Lerp(new Vector3(max_scale, max_scale, 1), new Vector3(min_scale, min_scale, 1), time);
+        }
     }
     
 }
