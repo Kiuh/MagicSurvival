@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class GlobalInfo : MonoBehaviour
 {
-    public static int points = 0;
+    public static int Coins = 10000;
+    public static string SelectedAvatar = "Human";
     public static string[,] MagesDescriptions = new string[24, 2]
     {
         { "Archemist","" },
@@ -83,6 +84,38 @@ public class GlobalInfo : MonoBehaviour
         { "Warlord","Close" },
         { "Witch","Close" },
         { "Wizard","Open" }
+    };
+    public static string[,] AvatarsOpened = new string[5, 2]
+    {
+        { "Human","Open"},
+        { "Witch","Close"},
+        { "Deamon","Close"},
+        { "Pumpkin","Close"},
+        { "Spirit","Close"},
+    };
+    public static string[,] AvatarsPrices = new string[5, 2]
+    {
+        { "Human","0"},
+        { "Witch","1000"},
+        { "Deamon","1200"},
+        { "Pumpkin","1300"},
+        { "Spirit","1400"},
+    };
+    public static string[,] AvatarsEffects = new string[5, 2]
+    {
+        { "Human","+1 brutal"},
+        { "Witch","+2 brutal"},
+        { "Deamon","+3 brutal"},
+        { "Pumpkin","+4 brutal"},
+        { "Spirit","+5 brutal"},
+    };
+    public static string[,] AvatarsDescriptions = new string[5, 2]
+    {
+        { "Human","Like a Human"},
+        { "Witch","Like a Witch"},
+        { "Deamon","Like a Deamon"},
+        { "Pumpkin","Like a Pumpkin"},
+        { "Spirit","Like a Spirit"},
     };
     private void Awake()
     {

@@ -11,6 +11,6 @@ public class CoinsCount : MonoBehaviour
     }
     void Update()
     {
-        text.text = $"Coins: {GlobalInfo.points}";
+        text.text = $"Coins: {GlobalInfo.Coins}";
     }
 }
