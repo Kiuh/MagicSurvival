@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class GlobalInfo : MonoBehaviour
 {
-    public static int Coins = 10000;
+    public static int Coins = 0;
+    public static int FreeResearchPoints = 10;
+    public static int MaxResearchPoints = 10;
     public static string SelectedAvatar = "Human";
     public static string[,] MagesDescriptions = new string[24, 2]
     {
@@ -116,6 +118,60 @@ public class GlobalInfo : MonoBehaviour
         { "Deamon","Like a Deamon"},
         { "Pumpkin","Like a Pumpkin"},
         { "Spirit","Like a Spirit"},
+    };
+    public static string[,] ResearchDescriptions = new string[24, 3]
+    {
+        { "Intelligence","","" },
+        { "Combat Mastery","","" },
+        { "Vitality","","" },
+        { "Resistence","","" },
+        { "Haste","","" },
+        { "Mana Refine","","" },
+        { "Regeneration","","" },
+        { "Bio Mana","","" },
+        { "Magic Circle","","" },
+        { "Propagating","","" },
+        { "High Speed Casting","","" },
+        { "Explorer","","" },
+        { "Rejuvenation","","" },
+        { "Recycle","","" },
+        { "Shade","","" },
+        { "Meditation","","" },
+        { "Curse","","" },
+        { "Nerve Barrier","","" },
+        { "Dark Magic","","" },
+        { "Blood Thirst","","" },
+        { "Prophecy","","" },
+        { "Archeology","","" },
+        { "Knowleage","","" },
+        { "Arcane Effuse","","" }
+    };
+    public static string[,] ResearchPointsInvested = new string[24, 2]
+    {
+        { "Intelligence","0" },
+        { "Combat Mastery","0" },
+        { "Vitality","0" },
+        { "Resistence","0" },
+        { "Haste","" },
+        { "Mana Refine","0" },
+        { "Regeneration","0" },
+        { "Bio Mana","0" },
+        { "Magic Circle","0" },
+        { "Propagating","0" },
+        { "High Speed Casting","0" },
+        { "Explorer","0" },
+        { "Rejuvenation","0" },
+        { "Recycle","0" },
+        { "Shade","0" },
+        { "Meditation","0" },
+        { "Curse","0" },
+        { "Nerve Barrier","0" },
+        { "Dark Magic","0" },
+        { "Blood Thirst","0" },
+        { "Prophecy","0" },
+        { "Archeology","0" },
+        { "Knowleage","0" },
+        { "Arcane Effuse","0" }
     };
     private void Awake()
     {

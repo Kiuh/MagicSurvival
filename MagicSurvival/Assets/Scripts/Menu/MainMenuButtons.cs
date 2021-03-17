@@ -25,6 +25,10 @@ public class MainMenuButtons : MonoBehaviour
     {
     
     }
+    public void Options()
+    {
+
+    }
     public void OpenReserchBook() 
     {
         
