@@ -113,7 +113,7 @@ public class GlobalInfo : MonoBehaviour
     };
     public static string[,] AvatarsDescriptions = new string[5, 2]
     {
-        { "Human","Like a Human"},
+        { "Human","Simple but inventive kind of creature, not very special"},
         { "Witch","Like a Witch"},
         { "Deamon","Like a Deamon"},
         { "Pumpkin","Like a Pumpkin"},
@@ -152,7 +152,7 @@ public class GlobalInfo : MonoBehaviour
         { "Combat Mastery","0" },
         { "Vitality","0" },
         { "Resistence","0" },
-        { "Haste","" },
+        { "Haste","0" },
         { "Mana Refine","0" },
         { "Regeneration","0" },
         { "Bio Mana","0" },
