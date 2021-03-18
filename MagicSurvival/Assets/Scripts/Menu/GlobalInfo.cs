@@ -6,18 +6,18 @@ public class GlobalInfo : MonoBehaviour
     public static int FreeResearchPoints = 10;
     public static int MaxResearchPoints = 10;
     public static string SelectedAvatar = "Human";
-    public static string[,] MagesDescriptions = new string[24, 2]
+    public static string[,] MagesDescriptions = new string[24, 2] // add descr for 100%
     {
         { "Archemist","" },
         { "Archmage","" },
-        { "Astronomer","" },
+        { "Astronomer","Setellite lvl +1, Create Setellite +1, Setellite damage, size +15%." },
         { "Bard","" },
         { "Battle Mage","" },
         { "Bishop","" },
         { "Dark Mage","" },
         { "Druid","" },
         { "Electromancer","" },
-        { "Elementalist","" },
+        { "Elementalist","Incineration lvl +1, Frost Nova lvl +1, Incineration,Frost Nova Cooldown -10%" },
         { "Enchantress","" },
         { "Invoker","" },
         { "Kabbalist","" },
@@ -25,13 +25,13 @@ public class GlobalInfo : MonoBehaviour
         { "Mage","" },
         { "Magician","" },
         { "Scholar","" },
-        { "Shaman","" },
+        { "Shaman","Thunderstorm lvl +1, Thunderstorm Damage +15%, Thunderstorm Cooldown -10%" },
         { "Socerer","" },
         { "Summoner","" },
-        { "Warlock","" },
+        { "Warlock","Meteor lvl +1, Meteor damage +15%, Meteor radius +10%" },
         { "Warlord","" },
         { "Witch","" },
-        { "Wizard","" }
+        { "Wizard","Basic School" }
     };
     public static string[,] MagesMasterProcent = new string[24, 2]
     {
@@ -98,10 +98,10 @@ public class GlobalInfo : MonoBehaviour
     public static string[,] AvatarsPrices = new string[5, 2]
     {
         { "Human","0"},
-        { "Witch","1000"},
-        { "Deamon","1200"},
-        { "Pumpkin","1300"},
-        { "Spirit","1400"},
+        { "Witch","1700"},
+        { "Deamon","2000"},
+        { "Pumpkin","2100"},
+        { "Spirit","2400"},
     };
     public static string[,] AvatarsEffects = new string[5, 2]
     {
@@ -109,7 +109,7 @@ public class GlobalInfo : MonoBehaviour
         { "Witch","+7% instant death rate"},
         { "Deamon","+8% all outcoming damage"},
         { "Pumpkin","+15% speed"},
-        { "Spirit","+10% magic cooldown"},
+        { "Spirit","-10% magic cooldown"},
     };
     public static string[,] AvatarsDescriptions = new string[5, 2]
     {
