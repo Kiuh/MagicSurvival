@@ -105,19 +105,19 @@ public class GlobalInfo : MonoBehaviour
     };
     public static string[,] AvatarsEffects = new string[5, 2]
     {
-        { "Human","+1 brutal"},
-        { "Witch","+2 brutal"},
-        { "Deamon","+3 brutal"},
-        { "Pumpkin","+4 brutal"},
-        { "Spirit","+5 brutal"},
+        { "Human","+8% exp gains"},
+        { "Witch","+7% instant death rate"},
+        { "Deamon","+8% all outcoming damage"},
+        { "Pumpkin","+15% speed"},
+        { "Spirit","+10% magic cooldown"},
     };
     public static string[,] AvatarsDescriptions = new string[5, 2]
     {
-        { "Human","Simple but inventive kind of creature, not very special"},
-        { "Witch","Like a Witch"},
-        { "Deamon","Like a Deamon"},
-        { "Pumpkin","Like a Pumpkin"},
-        { "Spirit","Like a Spirit"},
+        { "Human","Simple but inventive kind of creature, not very special, basically fool but pretty traineble."},
+        { "Witch","The witch, a mysterious person, loves death and doom.  The best companion is a cat."},
+        { "Deamon","The spawn of darkness, the fiend of hell, the devil himself favors him, loves to devour the environment."},
+        { "Pumpkin","The pumpkin is a gourd, a mindless creature, but one of the most terrifying of the demonic kind."},
+        { "Spirit","It is not a creature, it is the essence of mana, the closest relative of the magician, instant connection."},
     };
     public static string[,] ResearchDescriptions = new string[24, 3]
     {
