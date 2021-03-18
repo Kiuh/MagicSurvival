@@ -33,11 +33,11 @@ public class ResearchItem : MonoBehaviour, IPointerClickHandler
         {
             if (GlobalInfo.ResearchPointsInvested[i, 0] == ResearchName)
             {
-                if (GlobalInfo.MagesMasterProcent[i, 1] == "0")
+                if (GlobalInfo.ResearchPointsInvested[i, 1] == "0")
                 {
                     image.color = Color.gray;
                 }
-                else if(GlobalInfo.MagesMasterProcent[i, 1] == "1") 
+                else if(GlobalInfo.ResearchPointsInvested[i, 1] == "1") 
                 {
                     image.color = Color.yellow;
                 }
@@ -99,7 +99,7 @@ public class ResearchItem : MonoBehaviour, IPointerClickHandler
                     }
                     if (k == 0 || k == 1)
                     {
-                        ForResearchDescription.text = GlobalInfo.MagesDescriptions[i, 1];
+                        ForResearchDescription.text = GlobalInfo.ResearchDescriptions[i, 1];
                         if (k == 0)
                         {
                             point1.GetComponent<Image>().color = Color.gray;
@@ -113,13 +113,13 @@ public class ResearchItem : MonoBehaviour, IPointerClickHandler
                     }
                     else if (k == 2)
                     {
-                        ForResearchDescription.text = GlobalInfo.MagesDescriptions[i, 2];
+                        ForResearchDescription.text = GlobalInfo.ResearchDescriptions[i, 2];
                         point1.GetComponent<Image>().color = Color.yellow;
                         point2.GetComponent<Image>().color = Color.yellow;
                     }
                     break;
                 }
-                if (i == GlobalInfo.MagesDescriptions.Length / 2 - 1)
+                if (i == GlobalInfo.ResearchDescriptions.Length / 2 - 1)
                 {
                     ForResearchDescription.text = "Not found";
                 }
@@ -163,7 +163,7 @@ public class ResearchItem : MonoBehaviour, IPointerClickHandler
                 }
                 if (k == 0 || k == 1)
                 {
-                    ForResearchDescription.text = GlobalInfo.MagesDescriptions[i, 1];
+                    ForResearchDescription.text = GlobalInfo.ResearchDescriptions[i, 1];
                     if (k == 0)
                     {
                         point1.GetComponent<Image>().color = Color.gray;
@@ -177,13 +177,13 @@ public class ResearchItem : MonoBehaviour, IPointerClickHandler
                 }
                 else if (k == 2)
                 {
-                    ForResearchDescription.text = GlobalInfo.MagesDescriptions[i, 2];
+                    ForResearchDescription.text = GlobalInfo.ResearchDescriptions[i, 2];
                     point1.GetComponent<Image>().color = Color.yellow;
                     point2.GetComponent<Image>().color = Color.yellow;
                 }
                 break;
             }
-            if (i == GlobalInfo.MagesDescriptions.Length / 2 - 1)
+            if (i == GlobalInfo.ResearchDescriptions.Length / 2 - 1)
             {
                 ForResearchDescription.text = "Not found";
             }

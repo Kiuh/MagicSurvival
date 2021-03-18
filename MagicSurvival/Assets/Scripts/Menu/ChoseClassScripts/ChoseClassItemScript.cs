@@ -68,25 +68,13 @@ public class ChoseClassItemScript : MonoBehaviour, IPointerClickHandler
                 rect.localScale = new Vector3(bs.max_scale, bs.max_scale, 1);
                 image.color = new Color(0.7921569f, 0.7882353f, 0.3176471f, 1);
                 ForClassName.text = ClassName;
-                for (int i = 0; i < GlobalInfo.MagesDescriptions.Length / 2; i++)
-                {
-                    if (GlobalInfo.MagesDescriptions[i, 0] == ClassName)
-                    {
-                        ForClassDescription.text = GlobalInfo.MagesDescriptions[i, 1];
-                        break;
-                    }
-                    if (i == GlobalInfo.MagesDescriptions.Length / 2 - 1)
-                    {
-                        ForClassDescription.text = "Not found";
-                    }
-                }
                 for (int i = 0; i < GlobalInfo.MagesMasterProcent.Length / 2; i++)
                 {
                     if (GlobalInfo.MagesMasterProcent[i, 0] == ClassName)
                     {
                         if (GlobalInfo.MagesMasterProcent[i, 1] == "100")
                         {
-                            ForClassDescription.text = "Master";
+                            ForClassMastery.text = "Master";
                         }
                         else
                         {
@@ -97,6 +85,21 @@ public class ChoseClassItemScript : MonoBehaviour, IPointerClickHandler
                     if (i == GlobalInfo.MagesMasterProcent.Length / 2 - 1)
                     {
                         ForClassMastery.text = "Not found";
+                    }
+                }
+                for (int i = 0; i < GlobalInfo.MagesDescriptions.Length / 3; i++)
+                {
+                    if (GlobalInfo.MagesDescriptions[i, 0] == ClassName)
+                    {
+                        if (ForClassMastery.text == "Master")
+                            ForClassDescription.text = GlobalInfo.MagesDescriptions[i, 2];
+                        else 
+                            ForClassDescription.text = GlobalInfo.MagesDescriptions[i, 1];
+                        break;
+                    }
+                    if (i == GlobalInfo.MagesDescriptions.Length / 2 - 1)
+                    {
+                        ForClassDescription.text = "Not found";
                     }
                 }
                 ForClassName.color = Color.yellow;

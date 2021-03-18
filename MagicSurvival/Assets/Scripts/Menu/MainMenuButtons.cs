@@ -8,10 +8,12 @@ public class MainMenuButtons : MonoBehaviour
     public Canvas canvas;
     GameObject SelectClass;
     GameObject ChooseAvatar;
+    GameObject Laboratory;
     private void Start()
     {
         SelectClass = Resources.Load("SelectClass") as GameObject;
         ChooseAvatar = Resources.Load("ChooseAvatar") as GameObject;
+        Laboratory = Resources.Load("Laboratory") as GameObject;
     }
     public void ButtonStart() 
     {
@@ -23,7 +25,7 @@ public class MainMenuButtons : MonoBehaviour
     }
     public void EnterLaboratory() 
     {
-    
+        GameObject.Instantiate(Laboratory, canvas.transform);
     }
     public void Options()
     {

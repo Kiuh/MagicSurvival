@@ -91,7 +91,7 @@ public class ResearchGridManager : MonoBehaviour
     {
     
     }
-    public void ButonInvest() 
+    public void ButonInvest()
     {
         if (GlobalInfo.FreeResearchPoints > 0)
         {
@@ -99,13 +99,15 @@ public class ResearchGridManager : MonoBehaviour
             {
                 if (GlobalInfo.ResearchPointsInvested[i, 0] == ChoosedResearch)
                 {
-                    if (GlobalInfo.MagesMasterProcent[i, 1] == "0")
+                    if (GlobalInfo.ResearchPointsInvested[i, 1] == "0")
                     {
-                        GlobalInfo.MagesMasterProcent[i, 1] = "1";
+                        GlobalInfo.FreeResearchPoints -= 1;
+                        GlobalInfo.ResearchPointsInvested[i, 1] = "1";
                     }
-                    else if (GlobalInfo.MagesMasterProcent[i, 1] == "1")
+                    else if (GlobalInfo.ResearchPointsInvested[i, 1] == "1")
                     {
-                        GlobalInfo.MagesMasterProcent[i, 1] = "2";
+                        GlobalInfo.FreeResearchPoints -= 1;
+                        GlobalInfo.ResearchPointsInvested[i, 1] = "2";
                     }
                     break;
                 }
@@ -114,8 +116,8 @@ public class ResearchGridManager : MonoBehaviour
             {
                 if(item.ResearchName == ChoosedResearch) { item.AsClicked(); }
             }
+            FreePoints.text = "Research points: " + GlobalInfo.FreeResearchPoints;
         }
-        FreePoints.text = "Research points: " + GlobalInfo.FreeResearchPoints;
     }
     public void ButonRetrieve()
     {
@@ -123,13 +125,15 @@ public class ResearchGridManager : MonoBehaviour
         {
             if (GlobalInfo.ResearchPointsInvested[i, 0] == ChoosedResearch)
             {
-                if (GlobalInfo.MagesMasterProcent[i, 1] == "1")
+                if (GlobalInfo.ResearchPointsInvested[i, 1] == "1")
                 {
-                    GlobalInfo.MagesMasterProcent[i, 1] = "0";
+                    GlobalInfo.FreeResearchPoints += 1;
+                    GlobalInfo.ResearchPointsInvested[i, 1] = "0";
                 }
-                else if (GlobalInfo.MagesMasterProcent[i, 1] == "2")
+                else if (GlobalInfo.ResearchPointsInvested[i, 1] == "2")
                 {
-                    GlobalInfo.MagesMasterProcent[i, 1] = "1";
+                    GlobalInfo.FreeResearchPoints += 1;
+                    GlobalInfo.ResearchPointsInvested[i, 1] = "1";
                 }
                 break;
             }

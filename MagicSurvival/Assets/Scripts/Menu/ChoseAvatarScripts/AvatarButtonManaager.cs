@@ -39,7 +39,7 @@ public class AvatarButtonManaager : MonoBehaviour
     }
     public void Witch() 
     {
-        SelectedAvatar = "Witch";
+        SelectedAvatar = "Elf";
         ShowAboutAvatar();
         UpdateShadows();
     }
@@ -155,8 +155,8 @@ public class AvatarButtonManaager : MonoBehaviour
     void UpdateShadows() 
     {
         WitchShadow.color = Color.gray;
-        if (SelectedAvatar == "Witch") WitchShadow.color = Color.white;
-        if (GlobalInfo.SelectedAvatar == "Witch") WitchShadow.color = Color.red;
+        if (SelectedAvatar == "Elf") WitchShadow.color = Color.white;
+        if (GlobalInfo.SelectedAvatar == "Elf") WitchShadow.color = Color.red;
         HumanShadow.color = Color.gray;
         if (SelectedAvatar == "Human") HumanShadow.color = Color.white;
         if (GlobalInfo.SelectedAvatar == "Human") HumanShadow.color = Color.red;
