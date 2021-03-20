@@ -32,6 +32,8 @@ public class ResearchGridManager : MonoBehaviour
     GameObject point2;
     [SerializeField]
     Text FreePoints;
+    [SerializeField]
+    GameObject BuyMenu;
     void Awake()
     {
         ShowOneButton();
@@ -89,7 +91,7 @@ public class ResearchGridManager : MonoBehaviour
     }
     public void ButtonBuyResearchPoint() 
     {
-    
+        BuyMenu.SetActive(true);
     }
     public void ButonInvest()
     {

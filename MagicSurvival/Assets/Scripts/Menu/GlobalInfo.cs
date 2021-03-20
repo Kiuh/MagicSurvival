@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class GlobalInfo : MonoBehaviour
 {
-    public static int Coins = 0;
+    public static int Coins = 10000;
+    public static int CurrentPriceForPoints = 1000;
+    public static int StepForPoints = 100;
     public static int FreeResearchPoints = 10;
     public static int MaxResearchPoints = 10;
     public static string SelectedAvatar = "Human";
@@ -74,12 +76,12 @@ public class GlobalInfo : MonoBehaviour
         { "Elementalist","Close" },
         { "Enchantress","Close" },
         { "Invoker","Close" },
-        { "Kabbalist","Close" },
+        { "Kabbalist","Open" },
         { "Lich","Close" },
         { "Mage","Close" },
         { "Magician","Close" },
         { "Scholar","Close" },
-        { "Shaman","Close" },
+        { "Shaman","Open" },
         { "Socerer","Close" },
         { "Summoner","Close" },
         { "Warlock","Close" },
@@ -172,6 +174,54 @@ public class GlobalInfo : MonoBehaviour
         { "Archeology","0" },
         { "Knowledge","0" },
         { "Arcane Effuse","0" }
+    };
+    public static string[,] AreasDescriptions = new string[5, 2]
+    {
+        { "Array Zone","Something about Array Zone"},
+        { "Laboratory","Something about Laboratory"},
+        { "Sewerage","Something about Sewerage"},
+        { "Outskirt","Something about Outskirt"},
+        { "Arboretum","Something about Arboretum"},
+    };
+    public static string[,] AreasBestTime = new string[5, 2]
+    {
+        { "Array Zone","00:00"},
+        { "Laboratory","00:00"},
+        { "Sewerage","00:00"},
+        { "Outskirt","00:00"},
+        { "Arboretum","00:00"},
+    };
+    public static string[,] AreasGoal = new string[5, 2]
+    {
+        { "Array Zone","The goal is survive as long as posibble"},
+        { "Laboratory","The goal is survive as long as posibble"},
+        { "Sewerage","The goal is survive as long as posibble"},
+        { "Outskirt","The goal is survive as long as posibble"},
+        { "Arboretum","The goal is survive as long as posibble"},
+    };
+    public static string[,] AreasModifications = new string[5, 2]
+    {
+        { "Array Zone","No Modifications"},
+        { "Laboratory","Reward +30%"},
+        { "Sewerage","Reward +50%, Starting level +10"},
+        { "Outskirt","Reward +80%"},
+        { "Arboretum","Reward +100%"},
+    };
+    public static string[,] AreasOpened = new string[5, 2]
+    {
+        { "Array Zone","Open"},
+        { "Laboratory","Open"},
+        { "Sewerage","Open"},
+        { "Outskirt","Open"},
+        { "Arboretum","Close"},
+    };
+    public static string[,] AreasOrder = new string[5, 2]
+    {
+        { "Array Zone","1"},
+        { "Laboratory","2"},
+        { "Sewerage","3"},
+        { "Outskirt","4"},
+        { "Arboretum","5"},
     };
     private void Awake()
     {

@@ -2,9 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ClassesGridManager : MonoBehaviour
 {
+    [SerializeField]
+    GameObject parent;
+    [SerializeField]
+    string SceneName = "SelectLevel";
     Sprite[] sprites;
     [SerializeField]
     GameObject example;
@@ -18,8 +23,14 @@ public class ClassesGridManager : MonoBehaviour
     public string ChoosedClass = "None";
     [SerializeField]
     List<ChoseClassItemScript> ccis;
+    [SerializeField]
+    GameObject ButtonSelect;
+    Text text;
+    ButtonScale bs;
     void Awake()
     {
+        text = ButtonSelect.GetComponent<Text>();
+        bs = ButtonSelect.GetComponent<ButtonScale>();
         sprites = Resources.LoadAll<Sprite>("MagesIcons");
         rect = this.GetComponent<RectTransform>();
         gridLayout = this.GetComponent<GridLayoutGroup>();
@@ -57,7 +68,29 @@ public class ClassesGridManager : MonoBehaviour
         }
         example.SetActive(false);
     }
-
+    void Update()
+    {
+        if (ChoosedClass != "None")
+        {
+            text.color = new Color(1f, 0.4352941f, 0.2313726f);
+            bs.min_scale = 1.1f;
+            bs.max_scale = 1.2f;
+        }
+        else
+        {
+            text.color = new Color(0.3584906f, 0.3584906f, 0.3584906f);
+            bs.min_scale = 1f;
+            bs.max_scale = 1.1f;
+        }
+    }
+    public void SelectButtonClick() 
+    {
+        if (ChoosedClass != "None") SceneManager.LoadScene(SceneName);
+    }
+    public void CloseButtonClick() 
+    {
+        GameObject.Destroy(parent);
+    }
     public void Clear() 
     {
         foreach (ChoseClassItemScript item in ccis)
