@@ -3,6 +3,8 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Net.Http.Headers;
+using System;
 
 public class ClassesGridManager : MonoBehaviour
 {

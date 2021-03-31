@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class SelectArea : MonoBehaviour
 {
     [SerializeField]
-    string CloseSceneName = "Scenes/MainMenu";
+    string CloseSceneName = "MainMenu";
+    [SerializeField]
+    string PLaySceneName = "Gameplay";
     [SerializeField]
     Text AreaName;
     [SerializeField]
@@ -107,7 +109,8 @@ public class SelectArea : MonoBehaviour
     }
     public void ButtonPlay() 
     {
-        
+        GlobalInfo.SelectedArea = AreaName.text;
+        SceneManager.LoadScene(PLaySceneName);
     }
     public void Close() 
     {

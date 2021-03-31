@@ -8,6 +8,7 @@ public class GlobalInfo : MonoBehaviour
     public static int FreeResearchPoints = 10;
     public static int MaxResearchPoints = 10;
     public static string SelectedAvatar = "Human";
+    public static string SelectedArea = "Arboretum";
     public static string[,] MagesDescriptions = new string[24, 3]
     {
         { "Archemist","Energy Bolt lvl +1, Energy Bolt Damage, Duration, Size +22%","Energy Bolt lvl +1, Energy Bolt Damage, Duration, Size, Projectile Speed +30%" },
